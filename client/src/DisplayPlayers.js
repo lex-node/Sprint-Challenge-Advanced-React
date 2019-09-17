@@ -13,7 +13,9 @@ const DisplayPlayers = (props) => {
     return (
         <div className="playerBoxesContainer">
             <h1>Number of Liked Players: {playerLikes}</h1>
+            <button onClick={() => setPlayerLikes(0)}>Reset Liked Player Count</button>
             <h1>Number of Hated Players: {playerHates}</h1>
+            <button onClick={() => setPlayerHates(0)}>Reset Hated Player Count</button>
             {props.players.map((player) =>
                 <div key={player.id} className="playerBox">
                     <h1>{player.name}</h1>
